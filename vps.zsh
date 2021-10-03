@@ -40,3 +40,16 @@ function vps() {
     echo "Trying to: ssh -A -t $host"
     ssh -A -t $host
 }
+
+compdef _vps_comp vps
+
+function _vps_comp() {
+    local -a servers
+    servers=(\
+        '6221:retorr'\
+        '8088:easylang-cms, easylang-landings'\
+        '8204:code-sender, proxy-service'\
+    )
+    _describe 'server' servers
+    return
+}
