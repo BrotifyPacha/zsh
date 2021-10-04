@@ -11,7 +11,7 @@ bindkey -e
 zstyle :compinstall filename '/home/pgusev/.zshrc'
 
 # Add ssh creds
-ssh-add ~/.ssh/{home,work}-main
+ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 
 autoload -Uz compinit ; compinit
 
