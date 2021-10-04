@@ -21,7 +21,7 @@ setopt complete_in_word
 # autosuggestions plugin
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white,bg=grey"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777,bg=gray"
 
 # explore func
 source ~/.config/zsh/explore.zsh
