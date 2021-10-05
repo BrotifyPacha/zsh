@@ -47,6 +47,7 @@ function _vps_comp() {
     local -a servers
     servers=(\
         '6221:retorr'\
+        '6229:trainspotting'\
         '8088:easylang-cms, easylang-landings'\
         '8204:code-sender, proxy-service'\
     )
