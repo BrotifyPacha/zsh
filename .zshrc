@@ -45,6 +45,9 @@ precmd() {
 # Aliases
 alias config='nvim ~/.config/zsh/.zshrc'
 
+alias nivm='nvim'
+alias nvmi='nvim'
+alias vinm='nvim'
 alias vnin='nvim'
 alias vnim='nvim'
 
