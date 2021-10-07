@@ -13,6 +13,8 @@ zstyle :compinstall filename '/home/pgusev/.zshrc'
 # Add ssh creds
 ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 
+setxkbmap -option "caps:swapescape"
+
 autoload -Uz compinit ; compinit
 
 setopt auto_param_slash
