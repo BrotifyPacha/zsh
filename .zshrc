@@ -18,6 +18,7 @@ setxkbmap -option "caps:swapescape"
 autoload -Uz compinit ; compinit
 
 setopt auto_param_slash
+setopt menu_complete
 setopt complete_in_word
 
 # autosuggestions plugin
