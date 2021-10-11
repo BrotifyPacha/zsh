@@ -30,8 +30,7 @@ function vps() {
     if [[ $(pwd) == *"devel"* ]] {
         devel=$(pwd | grep -o 'devel[0-9]\?')
         if [[ "$1" == "$devel" ]] {
-            dir=$(pwd | grep -o 'devel.*')
-            dir='~/'${dir:7}
+            dir='~'$(pwd | grep -o 'devel.*' | sed 's/devel[0-9]\?//')
             echo "ssh -A -t $host \"cd $dir ; bash --login\""
             ssh -A -t $host "cd $dir ; bash --login"
             return
