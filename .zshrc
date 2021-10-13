@@ -30,6 +30,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777,bg=gray"
 source ~/.config/zsh/explore.zsh
 # vps func
 source ~/.config/zsh/vps.zsh
+# config manager
+source ~/.config/zsh/config.zsh
 
 # Prompt
 precmd() {
