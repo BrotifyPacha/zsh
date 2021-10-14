@@ -13,6 +13,7 @@ zstyle :compinstall filename '/home/pgusev/.zshrc'
 # Add ssh creds
 ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 
+TERM=xterm-256color
 setxkbmap -option "caps:swapescape"
 
 autoload -Uz compinit ; compinit
@@ -30,6 +31,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777,bg=gray"
 source ~/.config/zsh/explore.zsh
 # vps func
 source ~/.config/zsh/vps.zsh
+# config manager
+source ~/.config/zsh/config.zsh
 
 # Prompt
 precmd() {
@@ -46,12 +49,5 @@ precmd() {
 }
 
 # Aliases
-alias config='nvim ~/.config/zsh/.zshrc'
-alias bspconfig='cd ~/.config/bspwm && nvim'
-
-alias nivm='nvim'
-alias nvmi='nvim'
-alias vinm='nvim'
-alias vnin='nvim'
-alias vnim='nvim'
+source ~/.config/zsh/aliases.zsh
 
