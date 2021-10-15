@@ -22,6 +22,6 @@ function explore() {
 compdef _explore_comp explore
 
 function _explore_comp() {
-    _values 'server' 'devel' 'devel2' 'devel3'
+    _values 'server' 'devel' 'devel2' 'devel3' 'embla'
     return
 }
