@@ -32,11 +32,11 @@ function config {
 function config_update {
     echo 'Updating config...'
     echo 'Updating zsh...'
-    cd ~/.config/zsh && git pull
+    cd ~/.config/zsh && git pull 2>/dev/null
     echo 'Updating nvim...'
-    cd ~/.config/nvim && git pull
+    cd ~/.config/nvim && git pull 2>/dev/null
     echo 'Updating bspwm...'
-    cd ~/.config/bspwm && git pull
+    cd ~/.config/bspwm && git pull 2>/dev/null
 
 }
 
