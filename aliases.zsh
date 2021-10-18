@@ -8,3 +8,8 @@ alias vnim='nvim'
 
 alias ll='ls -l'
 alias la='ls -la'
+
+function cd {
+    builtin cd $@
+    pwd > /tmp/cwd
+}
