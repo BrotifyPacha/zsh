@@ -13,6 +13,7 @@ zstyle :compinstall filename '/home/pgusev/.zshrc'
 # Add ssh creds
 ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 
+EDITOR=nvim
 TERM=xterm-256color
 setxkbmap -option "caps:swapescape"
 
