@@ -1,6 +1,5 @@
 alias bspconfig='cd ~/.config/bspwm && nvim'
 
-alias nvim='sudo nvim'
 alias pacman='sudo pacman'
 alias pamac='sudo pamac'
 
