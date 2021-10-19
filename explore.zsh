@@ -1,6 +1,13 @@
 # /usr/bin/zsh
 
 function explore() {
+    if [[ $1 == '-c' || $1 =~ '--clear' ]] {
+        shift
+        kill -9 $(ps -C sshfs -o pid=) 2>/dev/null
+        for mountPath in $HOME/workspace/{devel{,2,3},embla.immo}; do
+            fusermount -uz $mountPath 2>/dev/null
+        done
+    }
     if [[ $# < 1 || $# > 1 ]] {
         echo 'Usage: explore <devel[2|3]|embla>'
     } else {
