@@ -23,6 +23,9 @@ setopt auto_param_slash
 setopt menu_complete
 setopt complete_in_word
 
+zmodload zsh/complist
+zstyle ':completion:*' menu select=0 search
+
 # autosuggestions plugin
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
