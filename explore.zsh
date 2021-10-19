@@ -29,6 +29,12 @@ function explore() {
 compdef _explore_comp explore
 
 function _explore_comp() {
-    _values 'server' 'devel' 'devel2' 'devel3' 'embla'
+    _arguments \
+        '-c[clear existing connections]:clearArg'
+    _values 'server'\
+        'embla[php-5.2 - runiverse/configs, content-pusher]'\
+        'devel[php-5.6 - provas-core, provas-callcenter]'\
+        'devel2[php-7.1 - code-sender, proxy-service, simple-subscr, retorr]'\
+        'devel3[php-7.4 - easylang-cms, landings]'
     return
 }
