@@ -55,5 +55,4 @@ precmd() {
 # Aliases
 source ~/.config/zsh/aliases.zsh
 
-cd "$(cat /tmp/cwd || ~)"
 

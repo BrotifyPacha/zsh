@@ -12,6 +12,8 @@ alias vnim='nvim'
 alias ll='ls -l'
 alias la='ls -la'
 
+alias rd='cd "$(cat /tmp/cwd || ~)"'
+
 function cd {
     builtin cd $@
     pwd > /tmp/cwd
