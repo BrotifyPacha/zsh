@@ -47,7 +47,9 @@ function _vps_comp() {
     servers=(\
         '6221:retorr'\
         '6229:trainspotting'\
+        '7108:runiverse-multimedia'
         '8088:easylang-cms, easylang-landings'\
+        '8119:salute-content-pusher'
         '8204:code-sender, proxy-service'\
     )
     _describe 'server' servers
