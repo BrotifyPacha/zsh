@@ -6,6 +6,10 @@ setopt autocd
 unsetopt beep
 # set emacks like bindings
 bindkey -e
+
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/pgusev/.zshrc'
