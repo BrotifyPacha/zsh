@@ -24,8 +24,8 @@ function config {
     case $1 in
         update)
             config_update;;
-        test)
-            config_test;;
+        task) cd ~/.config/task-warrior ; nvim .taskrc;;
+        bspc) cd ~/.config/bspwm ; nvim bspwmrc;;
     esac
 }
 
@@ -49,4 +49,14 @@ function config_test {
             echo "  $pkg"
         }
     done
+}
+
+compdef _config_comp config
+
+function _config_comp() {
+    _values 'config'\
+        'task[task-warrior]'\
+        'bspc[bspwm]'\
+        '[zsh]'
+    return
 }
