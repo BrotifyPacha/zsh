@@ -32,12 +32,12 @@ function vps() {
         if [[ "$1" == "$devel" ]] {
             dir='~'$(pwd | grep -o 'devel.*' | sed 's/devel[0-9]\?//')
             echo "ssh -A -t $host \"cd $dir ; bash --login\""
-            ssh -A -t $host "cd $dir ; bash --login"
+            ssh -A -t $host "cd $dir ; TERM=xterm ; bash --login"
             return
         }
     }
     echo "Trying to: ssh -A -t $host"
-    ssh -A -t $host
+    ssh -A -t $host "TERM=xterm ; bash --login"
 }
 
 compdef _vps_comp vps
