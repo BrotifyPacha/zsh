@@ -1,29 +1,35 @@
 # /usr/bin/zsh
 
+servers="$HOME/workspace/servers"
+
 function explore() {
+    if [[ $# < 1 || $# > 1 ]] {
+        echo 'Usage: explore <devel[2|3]|embla>'
+        return
+    }
     if [[ $1 == '-c' || $1 =~ '--clear' ]] {
         shift
         kill -9 $(ps -C sshfs -o pid=) 2>/dev/null
-        for mountPath in $HOME/workspace/{devel{,2,3},embla.immo}; do
+        for mountPath in $servers/* ; do
             fusermount -uz $mountPath 2>/dev/null
         done
+        echo 'Connections closed'
+        return
     }
-    if [[ $# < 1 || $# > 1 ]] {
-        echo 'Usage: explore <devel[2|3]|embla>'
-    } else {
-        case $1 in
-            embla)
-                local host="pgusev@embla.immo:/home/pgusev/"
-                local folder="$HOME/workspace/embla.immo/"
-                ;;
-            *)
-                local host="pgusev@nv-$1.mtu.immo:/home/pgusev/"
-                local folder="$HOME/workspace/$1"
-                ;;
-        esac
-        sshfs $host $folder > /dev/null 2>&1
-        cd $folder
-    }
+    case $1 in
+        embla)
+            local host="pgusev@embla.immo:/home/pgusev/"
+            local folder="embla.immo"
+            ;;
+        *)
+            local host="pgusev@nv-$1.mtu.immo:/home/pgusev/"
+            local folder="$1"
+            ;;
+    esac
+    dir="$servers/$folder"
+    mkdir -p "$dir"
+    sshfs $host "$dir" > /dev/null 2>&1
+    cd "$dir"
 }
 
 compdef _explore_comp explore
