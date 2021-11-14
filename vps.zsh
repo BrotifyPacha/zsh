@@ -1,10 +1,10 @@
 # /usr/bin/zsh
 
 function vps() {
-    if [[ $# < 1 && $(pwd) == *"devel"* ]] {
-        devel=$(pwd | grep -o 'devel[0-9]\?')
-        echo "dir devel $devel"
-        vps $devel
+    if [[ $# < 1 && $(pwd) =~ "servers\/(devel[0-9]?|embla.immo)" ]] {
+        server=$(pwd | grep -oP '(devel[0-9]?|embla)')
+        echo "dir: $server"
+        vps $server
         return
     }
     if [[ "$1" == "-h" || $# == 0 ]] {
@@ -27,10 +27,10 @@ function vps() {
         *)
             host="admin@vps$1.mtu.immo"
     esac
-    if [[ $(pwd) == *"devel"* ]] {
-        devel=$(pwd | grep -o 'devel[0-9]\?')
-        if [[ "$1" == "$devel" ]] {
-            dir='~'$(pwd | grep -o 'devel.*' | sed 's/devel[0-9]\?//')
+    if [[ $(pwd) =~ "servers\/(devel[0-9]?|embla.immo)" ]] {
+        server=$(pwd | grep -oP '(devel[0-9]?|embla)')
+        if [[ "$1" == "$server" ]] {
+            dir='~'$(pwd | grep -oP '(devel.*|embla.immo.*)' | sed 's/\(devel[0-9]\?\|embla.immo\)//')
             echo "ssh -A -t $host \"cd $dir ; bash --login\""
             ssh -A -t $host "cd $dir ; TERM=xterm ; bash --login"
             return
