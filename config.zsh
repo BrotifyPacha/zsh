@@ -2,7 +2,7 @@
 
 function config {
     if [[ $# == 0 ]] {
-        nvim ~/.config/zsh/.zshrc
+        cd ~/.config/zsh ; nvim .zshrc
     }
     case $1 in
         update)
