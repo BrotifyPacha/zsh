@@ -21,6 +21,10 @@ function explore() {
             local host="pgusev@embla.immo:/home/pgusev/"
             local folder="embla.immo"
             ;;
+        fenrir)
+            local host="pgusev@fenrir.immo:/home/pgusev/"
+            local folder="fenrir.immo"
+            ;;
         *)
             local host="pgusev@nv-$1.mtu.immo:/home/pgusev/"
             local folder="$1"
@@ -39,6 +43,7 @@ function _explore_comp() {
         '-c[clear existing connections]:clearArg'
     _values 'server'\
         'embla[php-5.2 - runiverse/configs, content-pusher]'\
+        'fenrir[php-5.3 - ps-content]'\
         'devel[php-5.6 - provas-core, provas-callcenter]'\
         'devel2[php-7.1 - code-sender, proxy-service, simple-subscr, retorr]'\
         'devel3[php-7.4 - easylang-cms, landings]'

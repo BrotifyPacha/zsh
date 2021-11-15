@@ -46,8 +46,8 @@ source ~/.config/zsh/config.zsh
 precmd() {
     p_usr=%F{250}%n%f%F{81}@%f%F{250}%m%f\ 
     p_pwd=$(pwd)
-    if [[ $(pwd) =~ 'devel[0-9]?|embla' ]] {
-        p_devel="%F{81}$(echo $p_pwd | rg -o 'devel[0-9]?|embla')%f "
+    if [[ $(pwd) =~ 'devel[0-9]?|embla|fenrir' ]] {
+        p_devel="%F{81}$(echo $p_pwd | rg -o 'devel[0-9]?|embla|fenrir')%f "
     } else {
         p_devel=''
     }

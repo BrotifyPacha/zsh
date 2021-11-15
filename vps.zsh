@@ -19,6 +19,9 @@ function vps() {
         "embla")
             host="pgusev@embla.immo"
             ;;
+        "fenrir")
+            host="pgusev@fenrir.immo"
+            ;;
         "devel") ;&
         "devel2") ;&
         "devel3")
@@ -45,6 +48,11 @@ compdef _vps_comp vps
 function _vps_comp() {
     local -a servers
     servers=(\
+        'devel:'\
+        'devel2:retorr, proxy-service, code-sender'\
+        'devel3:easylang'\
+        'fenrir:ps-content'\
+        'embla:runiverse, salute-content-pusher'\
         '6221:retorr'\
         '6229:trainspotting'\
         '7108:runiverse-multimedia'
