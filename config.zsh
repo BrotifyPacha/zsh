@@ -7,7 +7,7 @@ function config {
     case $1 in
         update)
             config_update;;
-        task) cd ~/.config/task-warrior ; nvim .taskrc;;
+        task) cd ~/.config/task ; nvim taskrc;;
         bspc) cd ~/.config/bspwm ; nvim bspwmrc;;
     esac
 }
