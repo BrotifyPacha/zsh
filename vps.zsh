@@ -55,7 +55,8 @@ function _vps_comp() {
         'embla:runiverse, salute-content-pusher'\
         '6221:retorr'\
         '6229:trainspotting'\
-        '7108:runiverse-multimedia'
+        '7108:runiverse-multimedia'\
+        '6158:runiverse-mtsinfo-anec'\
         '8088:easylang-cms, easylang-landings'\
         '8119:salute-content-pusher'
         '8204:code-sender, proxy-service'\
