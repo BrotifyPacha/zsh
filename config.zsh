@@ -9,6 +9,7 @@ function config {
             config_update;;
         task) cd ~/.config/task ; nvim taskrc;;
         bspc) cd ~/.config/bspwm ; nvim bspwmrc;;
+        ssh) cd ~/.ssh ; nvim config;;
     esac
 }
 
@@ -35,6 +36,7 @@ compdef _config_comp config
 
 function _config_comp() {
     _values 'config'\
+        'ssh[ssh]'\
         'task[task-warrior]'\
         'bspc[bspwm]'\
         '[zsh]'
