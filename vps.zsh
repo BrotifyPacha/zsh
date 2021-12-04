@@ -53,11 +53,14 @@ function _vps_comp() {
         'devel3:easylang'\
         'fenrir:ps-content'\
         'embla:runiverse, salute-content-pusher'\
+        '3180:provas-mtsrb'\
         '6221:retorr'\
         '6229:trainspotting'\
-        '7108:runiverse-multimedia'
+        '7108:runiverse-multimedia'\
+        '6158:runiverse-mtsinfo-anec'\
+        '8138:runiverse-mtsnews'\
         '8088:easylang-cms, easylang-landings'\
-        '8119:salute-content-pusher'
+        '8119:salute-content-pusher'\
         '8204:code-sender, proxy-service'\
     )
     _describe 'server' servers
