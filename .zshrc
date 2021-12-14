@@ -30,6 +30,12 @@ setopt complete_in_word
 zmodload zsh/complist
 zstyle ':completion:*' menu select=0 search
 
+# To make this work, one has to do below mappings in kitty
+# map shift+enter send_text all \x1b[13;2u
+# map ctrl+enter send_text all \x1b[13;5u
+bindkey -M menuselect '^M' .accept-line
+bindkey -M menuselect '^[[13;2u' accept-line
+
 # autosuggestions plugin
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
