@@ -14,6 +14,8 @@ alias la='ls -la'
 
 alias rd='cd "$(cat /tmp/cwd || ~)"'
 
+alias xphp='XDEBUG_SESSION=1 php'
+
 function cd {
     builtin cd $@
     pwd > /tmp/cwd
