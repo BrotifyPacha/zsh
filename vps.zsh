@@ -64,6 +64,6 @@ function _vps_comp() {
         '8119:salute-content-pusher'\
         '8204:code-sender, proxy-service'\
     )
-    _describe 'server' servers
+    _describe -V 'server' servers
     return
 }
