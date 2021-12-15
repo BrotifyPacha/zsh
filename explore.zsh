@@ -32,7 +32,8 @@ function explore() {
     esac
     dir="$servers/$folder"
     mkdir -p "$dir"
-    sshfs $host "$dir" > /dev/null 2>&1
+    sshfs -o reconnect,ServerAliveInterval=15,dir_cache=yes \
+        $host "$dir" > /dev/null 2>&1
     cd "$dir"
 }
 
