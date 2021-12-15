@@ -16,6 +16,8 @@ alias rd='cd "$(cat /tmp/cwd || ~)"'
 
 alias xphp='XDEBUG_SESSION=1 php'
 
+alias tsk='task'
+
 function cd {
     builtin cd $@
     pwd > /tmp/cwd
