@@ -48,11 +48,6 @@ compdef _vps_comp vps
 function _vps_comp() {
     local -a servers
     servers=(\
-        'devel:'\
-        'devel2:retorr, proxy-service, code-sender'\
-        'devel3:easylang'\
-        'fenrir:ps-content'\
-        'embla:runiverse, salute-content-pusher'\
         '3180:provas-mtsrb'\
         '6221:retorr'\
         '6229:trainspotting'\
@@ -64,6 +59,11 @@ function _vps_comp() {
         '8119:salute-content-pusher'\
         '8204:code-sender, proxy-service'\
         '6004:trainspotting load-balancer'\
+        'devel:'\
+        'devel2:retorr, proxy-service, code-sender'\
+        'devel3:easylang'\
+        'fenrir:ps-content'\
+        'embla:runiverse, salute-content-pusher'\
     )
     _describe -V 'server' servers
     return
