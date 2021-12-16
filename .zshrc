@@ -4,12 +4,14 @@ HISTSIZE=9999
 SAVEHIST=1000
 setopt autocd
 unsetopt beep
-# set emacks like bindings
-bindkey -e
+# set viins vi-insert mode by default
+bindkey -v
 
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
-bindkey  "^[[3~"  delete-char
+bindkey -v '^[[3~'  delete-char
+bindkey -v '^W' backward-delete-word
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/pgusev/.zshrc'
