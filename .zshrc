@@ -37,6 +37,8 @@ zstyle ':completion:*' menu select=0 search
 # map ctrl+enter send_text all \x1b[13;5u
 bindkey -M menuselect '^M' .accept-line
 bindkey -M menuselect '^[[13;2u' accept-line
+bindkey -M menuselect '^N' history-incremental-search-forward
+bindkey -M menuselect '^B' history-incremental-search-backward
 
 # autosuggestions plugin
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
