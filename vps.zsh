@@ -63,6 +63,7 @@ function _vps_comp() {
         '8088:easylang-cms, easylang-landings'\
         '8119:salute-content-pusher'\
         '8204:code-sender, proxy-service'\
+        '6004:trainspotting load-balancer'\
     )
     _describe -V 'server' servers
     return
