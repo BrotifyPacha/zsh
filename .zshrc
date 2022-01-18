@@ -1,4 +1,6 @@
 # Lines configured by zsh-newuser-install
+export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
+
 HISTFILE=~/.histfile
 HISTSIZE=9999
 SAVEHIST=1000
