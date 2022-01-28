@@ -1,5 +1,6 @@
 # Lines configured by zsh-newuser-install
 export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
+export PATH="$PATH:/home/$USER/go/bin"
 
 HISTFILE=~/.histfile
 HISTSIZE=9999
