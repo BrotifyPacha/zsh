@@ -23,3 +23,6 @@ function cd {
     builtin cd $@
     pwd > /tmp/cwd
 }
+
+# Git aliases
+alias gg='git status'
