@@ -1,6 +1,8 @@
 # Lines configured by zsh-newuser-install
 export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
 export PATH="$PATH:/home/$USER/go/bin"
+export EDITOR=nvim
+export GOPRIVATE=gitlab.action-media.ru*,https://gitlab.action-media.ru*
 
 HISTFILE=~/.histfile
 HISTSIZE=9999
