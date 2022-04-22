@@ -74,4 +74,5 @@ precmd() {
 # Aliases
 source ~/.config/zsh/aliases.zsh
 
+wmname LG3D
 
