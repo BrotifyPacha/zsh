@@ -4,7 +4,6 @@ export PATH="$PATH:/home/$USER/go/bin"
 export EDITOR=nvim
 export GOPRIVATE=gitlab.action-media.ru*,https://gitlab.action-media.ru*
 
-HISTFILE=~/.histfile
 HISTSIZE=9999
 SAVEHIST=1000
 setopt autocd
