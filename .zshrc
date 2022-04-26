@@ -23,6 +23,7 @@ zstyle :compinstall filename '/home/pgusev/.zshrc'
 
 # Add ssh creds
 ssh-add ~/.ssh/{home,work}-main 2>/dev/null
+ssh-add ~/.ssh/id_work_action_main_ed25519 2>/dev/null
 
 EDITOR=nvim
 TERM=xterm-256color
