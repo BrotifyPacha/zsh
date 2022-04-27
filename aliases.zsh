@@ -24,5 +24,10 @@ function cd {
     pwd > /tmp/cwd
 }
 
+function mkcd {
+    mkdir $@
+    cd $@
+}
+
 # Git aliases
 alias gg='git status'
