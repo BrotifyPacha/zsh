@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
 export PATH="$PATH:/home/$USER/go/bin"
-export EDITOR=nvim
+export EDITOR=~/.local/bin/nvim
 export GOPRIVATE=gitlab.action-media.ru*,https://gitlab.action-media.ru*
 
 HISTFILE=~/.histfile
@@ -26,7 +26,6 @@ zstyle :compinstall filename '/home/pgusev/.zshrc'
 # Add ssh creds
 ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 
-EDITOR=nvim
 TERM=xterm-256color
 setxkbmap -option "caps:swapescape"
 
