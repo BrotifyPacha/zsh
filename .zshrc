@@ -3,6 +3,7 @@ export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
 export PATH="$PATH:/home/$USER/go/bin"
 export EDITOR=~/.local/bin/nvim
 export GOPRIVATE=gitlab.action-media.ru*,https://gitlab.action-media.ru*
+export TERM="xterm-kitty"
 
 HISTFILE=~/.histfile
 HISTSIZE=9999
@@ -26,7 +27,6 @@ zstyle :compinstall filename '/home/pgusev/.zshrc'
 # Add ssh creds
 ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 
-TERM=xterm-256color
 setxkbmap -option "caps:swapescape"
 
 autoload -Uz compinit ; compinit
