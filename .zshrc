@@ -85,3 +85,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Werf
 ! { which werf | grep -qsE "^/home/brotifypacha/.trdl/"; } && [[ -x "$HOME/bin/trdl" ]] && source $("$HOME/bin/trdl" use werf "1.2" "stable")
+# Kubectl
+source <(kubectl completion zsh)
