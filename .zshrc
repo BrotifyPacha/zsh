@@ -51,22 +51,15 @@ source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777,bg=gray"
 
-# explore func
-source ~/.config/zsh/explore.zsh
-# vps func
-source ~/.config/zsh/vps.zsh
 # config manager
 source ~/.config/zsh/config.zsh
+# help func
+source ~/.config/zsh/help.zsh
 
 # Prompt
 precmd() {
     p_usr=%F{250}%n%f%F{81}@%f%F{250}%m%f\ 
     p_pwd=$(pwd)
-    if [[ $(pwd) =~ 'devel[0-9]?|embla|fenrir' ]] {
-        p_devel="%F{81}$(echo $p_pwd | rg -o 'devel[0-9]?|embla|fenrir')%f "
-    } else {
-        p_devel=''
-    }
     p_dir=%F{250}%2~%f
     
     PROMPT="$p_usr$p_devel$p_dir $ "
