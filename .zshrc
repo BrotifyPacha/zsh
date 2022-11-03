@@ -55,18 +55,15 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777,bg=gray"
 source ~/.config/zsh/config.zsh
 # help func
 source ~/.config/zsh/help.zsh
-
-# Prompt
-precmd() {
-    p_usr=%F{250}%n%f%F{81}@%f%F{250}%m%f\ 
-    p_pwd=$(pwd)
-    p_dir=%F{250}%2~%f
-    
-    PROMPT="$p_usr$p_devel$p_dir $ "
-}
-
 # Aliases
 source ~/.config/zsh/aliases.zsh
+
+export PROMPT=%F{250}%n%f%F{81}@%f%F{250}%m%f\ %F{250}%2~%f\ \$\ 
+# # Prompt
+# precmd() {
+#     p_pwd=$(pwd)
+#     PROMPT="$p_usr$p_dir $ "
+# }
 
 wmname LG3D
 
