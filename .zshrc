@@ -27,7 +27,7 @@ zstyle :compinstall filename '/home/pgusev/.zshrc'
 # Add ssh creds
 ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 
-setxkbmap -option "caps:swapescape"
+setxkbmap -option "caps:escape"
 
 autoload -Uz compinit ; compinit
 
@@ -53,9 +53,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777,bg=gray"
 
 # config manager
 source ~/.config/zsh/config.zsh
-# help func
-source ~/.config/zsh/help.zsh
-# Aliases
+# aliases
 source ~/.config/zsh/aliases.zsh
 
 export PROMPT=%F{250}%n%f%F{81}@%f%F{250}%m%f\ %F{250}%2~%f\ \$\ 
