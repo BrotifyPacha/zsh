@@ -50,6 +50,7 @@ function config_install_packages {
         picom
         bspwm
         wmname
+        wmctrl
         xorg-xprop
         psensor
         # user
@@ -62,8 +63,10 @@ function config_install_packages {
         docker
         docker-compose
         go
+        npm
         delve
         kubectl
+        ripgrep
     )
     for package ("$packages[@]") do
         echo $padding$package
