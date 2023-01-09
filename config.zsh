@@ -6,13 +6,40 @@ function config {
     }
     case $1 in
         install)
-            config_install;;
+            shift
+            case "$1" in
+                '') ;&
+                'all')
+                    config_install_packages
+                    config_install_binaries
+                    config_install_repos
+                    ;;
+                'packages') config_install_packages ;;
+                'binaries') config_install_binaries ;;
+                'repos') config_install_repos ;;
+            esac
+            ;;
         bspc) cd ~/.config/bspwm ; nvim bspwmrc;;
         ssh) cd ~/.ssh ; nvim config;;
     esac
 }
 
-function config_install {
+function config_install_binaries {
+    typeset -a urls
+    urls=(
+        https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+        https://github.com/Kong/insomnia/releases/download/core%402022.7.0/Insomnia.Core-2022.7.0.AppImage
+    )
+    mkdir ~/.local/bin || true
+    for url ("$urls[@]") do
+        bin_name=$(echo "$url" | grep -Po '[^/]+$' | awk --field-separator '.' '{print $1}' | tr '[:upper:]' '[:lower:]')
+        bin_path="$HOME/.local/bin/$bin_name"
+        wget -o $bin_path "$url" && chmod a+x $bin_path
+        echo "$bin_name done"
+    done
+}
+
+function config_install_packages {
     padding='  '
     green='\033[0;32m'
     red='\033[0;31m'
@@ -39,7 +66,9 @@ function config_install {
         kubectl
     )
     for package ("$packages[@]") do
-        success=$(pamac install $package)
+        echo $padding$package
+        pamac install $package
+        success=$?
         echo -n $padding
         if [ $success ] ; then
             echo -n $green$reset
@@ -48,6 +77,19 @@ function config_install {
         fi
         echo $padding$package
     done
+    
+}
+
+function config_install_repos {
+    cd ~/.config
+    echo Cloning configs...
+    echo Cloning kitty config
+    git clone git@github.com:BrotifyPacha/kitty.git
+    echo Cloning nvim config
+    git clone git@github.com:BrotifyPacha/nvim.git
+    echo Cloning bspwm config
+    git clone git@github.com:BrotifyPacha/bspwm.git
+
 }
 
 compdef _config_comp config
