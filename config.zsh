@@ -54,6 +54,7 @@ function config_install_packages {
         wmctrl
         xorg-xprop
         psensor
+        xclip
         # user
         firefox
         brave-browser
