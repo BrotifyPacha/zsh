@@ -13,6 +13,7 @@ function config {
                     config_install_packages
                     config_install_binaries
                     config_install_repos
+                    config_install_snaps
                     ;;
                 'packages') config_install_packages ;;
                 'binaries') config_install_binaries ;;
@@ -92,7 +93,11 @@ function config_install_repos {
     git clone git@github.com:BrotifyPacha/nvim.git
     echo Cloning bspwm config
     git clone git@github.com:BrotifyPacha/bspwm.git
+}
 
+function config_install_snaps {
+    sudo ln -s /var/lib/snapd/snap /snap
+    snap install datagrip --channel 2021.1/stable --classic
 }
 
 compdef _config_comp config
