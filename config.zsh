@@ -25,6 +25,11 @@ function config {
     esac
 }
 
+function config_initial_setup {
+    sudo systemctl start docker.service
+    sudo usermod -aG docker $USER
+}
+
 function config_install_binaries {
     typeset -a urls
     urls=(
@@ -55,6 +60,7 @@ function config_install_packages {
         xorg-xprop
         psensor
         xclip
+        xdo
         # user
         firefox
         brave-browser
@@ -62,9 +68,12 @@ function config_install_packages {
         zsa-wally
         kitty
         # dev
+        # bind - network utilities
+        bind
         docker
         docker-compose
         go
+        make
         npm
         delve
         kubectl
