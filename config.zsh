@@ -61,6 +61,7 @@ function config_install_packages {
         psensor
         xclip
         xdo
+        ttf-joypixels
         # user
         firefox
         brave-browser
