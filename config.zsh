@@ -109,6 +109,7 @@ function config_install_repos {
 function config_install_snaps {
     sudo ln -s /var/lib/snapd/snap /snap
     snap install datagrip --channel 2021.1/stable --classic
+    snap install ngrok
 }
 
 compdef _config_comp config
