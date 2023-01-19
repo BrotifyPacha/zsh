@@ -40,7 +40,7 @@ function config_install_binaries {
     for url ("$urls[@]") do
         bin_name=$(echo "$url" | grep -Po '[^/]+$' | awk --field-separator '.' '{print $1}' | tr '[:upper:]' '[:lower:]')
         bin_path="$HOME/.local/bin/$bin_name"
-        wget -o $bin_path "$url" && chmod a+x $bin_path
+        wget -O $bin_path "$url" && chmod a+x $bin_path
         echo "$bin_name done"
     done
 }
