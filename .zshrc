@@ -5,9 +5,16 @@ export EDITOR=~/.local/bin/nvim
 export GOPRIVATE=gitlab.action-media.ru*,https://gitlab.action-media.ru*
 export TERM="xterm-kitty"
 
-HISTFILE=~/.histfile
-HISTSIZE=9999
-SAVEHIST=1000
+if [ $PWD = ~ ] ; then
+    HISTFILE=~/.histfile
+fi
+
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+
+HISTSIZE=5000
+SAVEHIST=5000
+
 setopt autocd
 unsetopt beep
 # set viins vi-insert mode by default
