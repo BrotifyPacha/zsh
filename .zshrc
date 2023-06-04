@@ -9,12 +9,14 @@ if [ $PWD = ~ ] ; then
     HISTFILE=~/.histfile
 fi
 
+setopt INC_APPEND_HISTORY
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
 HISTSIZE=5000
 SAVEHIST=5000
 
+setopt globdots
 setopt autocd
 unsetopt beep
 # set viins vi-insert mode by default
