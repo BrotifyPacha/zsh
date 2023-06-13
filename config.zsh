@@ -58,6 +58,7 @@ function config_install_packages {
         wmname
         wmctrl
         xorg-xprop
+        xorg-xev
         psensor
         xclip
         xdo
