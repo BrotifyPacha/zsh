@@ -1,9 +1,12 @@
 # Lines configured by zsh-newuser-install
 export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
-export PATH="$PATH:/home/$USER/go/bin"
+export PATH="$PATH:/home/$USER/.dotnet"
 export EDITOR=~/.local/bin/nvim
 export GOPRIVATE=gitlab.action-media.ru*,https://gitlab.action-media.ru*
 export TERM="xterm-kitty"
+
+export GOPATH=~/go
+export PATH="$PATH:$GOPATH/bin"
 
 if [ $PWD = ~ ] ; then
     HISTFILE=~/.histfile

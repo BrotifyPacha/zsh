@@ -121,3 +121,40 @@ function _config_comp() {
         '[zsh]'
     return
 }
+
+function gos {
+    system=~/go
+    echo "old: $GOPATH"
+
+    if [[ $# == 0 ]] {
+        1="default"
+    }
+    case $1 in
+        default)
+            to="$system"
+            alias go /usr/bin/go
+            ;;
+        17)
+            to="/home/$USER/sdk/go1.17.13"
+            alias go /home/$USER/sdk/go1.17.13/bin/go
+            ;;
+        19)
+            to="/home/$USER/sdk/go1.19"
+            alias go /home/$USER/sdk/go1.19/bin/go
+            ;;
+    esac
+
+    export PATH=$(echo "$PATH" | sed s%$GOPATH%$to%)
+    export GOPATH=$to
+    export GOROOT=$to
+    echo "new: $to"
+}
+
+compdef _go_select_comp gos
+function _go_select_comp() {
+    _values 'select_go'\
+        'default[1.20]'\
+        '19[1.19]'\
+        '17[1.17.13]'
+            return
+        }
