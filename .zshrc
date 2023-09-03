@@ -42,6 +42,8 @@ ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 setxkbmap -option "caps:escape"
 
 autoload -Uz compinit ; compinit
+autoload -Uz add-zsh-hook
+autoload -U colors && colors
 
 setopt auto_param_slash
 setopt menu_complete
@@ -68,12 +70,14 @@ source ~/.config/zsh/config.zsh
 # aliases
 source ~/.config/zsh/aliases.zsh
 
-export PROMPT=%F{250}%n%f%F{81}@%f%F{250}%m%f\ %F{250}%2~%f\ \$\ 
-# # Prompt
-# precmd() {
-#     p_pwd=$(pwd)
-#     PROMPT="$p_usr$p_dir $ "
-# }
+function set-prompt() {
+ local username=%F{245}%n%f%F{81}@%f%F{245}%m%f
+ local last_two_dirs=%F{250}%2~%f
+ local colored_prompt_sign="%(?.\$.%F{red}\$$reset_color)"
+ export PROMPT=$username\ $last_two_dirs\ %F{245}$'\n'└─%F{white}\ $colored_prompt_sign\ 
+}
+
+add-zsh-hook precmd set-prompt
 
 wmname LG3D
 
