@@ -73,8 +73,7 @@ source ~/.config/zsh/aliases.zsh
 function set-prompt() {
  local username=%F{245}%n%f%F{81}@%f%F{245}%m%f
  local last_two_dirs=%F{250}%2~%f
- local colored_prompt_sign="%(?.\$.%F{red}\$$reset_color)"
- export PROMPT=$username\ $last_two_dirs\ %F{245}$'\n'└─%F{white}\ $colored_prompt_sign\ 
+ export PROMPT=$username\ $last_two_dirs\ \$\ 
 }
 
 add-zsh-hook precmd set-prompt
