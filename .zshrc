@@ -70,13 +70,9 @@ source ~/.config/zsh/config.zsh
 # aliases
 source ~/.config/zsh/aliases.zsh
 
-function set-prompt() {
- local username=%F{245}%n%f%F{81}@%f%F{245}%m%f
- local last_two_dirs=%F{250}%2~%f
- export PROMPT=$username\ $last_two_dirs\ \$\ 
-}
-
-add-zsh-hook precmd set-prompt
+local username=%F{245}%n%f%F{81}@%f%F{245}%m%f
+local last_two_dirs=%F{250}%2~%f
+export PROMPT=$username\ $last_two_dirs\ \$\ 
 
 wmname LG3D
 
