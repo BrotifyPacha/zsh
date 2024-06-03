@@ -28,6 +28,8 @@ bindkey -v '^[[3~'  delete-char
 bindkey -v '^W' backward-delete-word
 bindkey -v '^A' beginning-of-line
 bindkey -v '^E' end-of-line
+bindkey -v '^B' backward-word
+bindkey -v '^F' forward-word
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
