@@ -71,7 +71,7 @@ source ~/.config/zsh/aliases.zsh
 
 local username=%F{245}%n%f%F{81}@%f%F{245}%m%f
 local last_two_dirs=%F{250}%2~%f
-export PROMPT=$username\ $last_two_dirs\ \$\ 
+export PROMPT=$username\ $last_two_dirs$'\n'\$\ 
 
 wmname LG3D
 
