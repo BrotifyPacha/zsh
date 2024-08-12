@@ -86,4 +86,5 @@ wmname LG3D
 # Werf
 ! { which werf | grep -qsE "^/home/brotifypacha/.trdl/"; } && [[ -x "$HOME/bin/trdl" ]] && source $("$HOME/bin/trdl" use werf "1.2" "stable")
 # Kubectl
+alias k=kubectl
 source <(kubectl completion zsh)
