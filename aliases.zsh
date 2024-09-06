@@ -31,3 +31,9 @@ function mkcd {
 
 # Git aliases
 alias gg='git status'
+
+# Docker compose aliases
+alias dc='docker compose'
+
+# Kubectl aliases
+alias kcu='kubectl config use-context'
