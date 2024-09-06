@@ -30,6 +30,7 @@ bindkey -v '^A' beginning-of-line
 bindkey -v '^E' end-of-line
 bindkey -v '^B' backward-word
 bindkey -v '^F' forward-word
+bindkey -v "^H" history-incremental-search-backward
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
