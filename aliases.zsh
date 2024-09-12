@@ -37,3 +37,4 @@ alias dc='docker compose'
 
 # Kubectl aliases
 alias kcu='kubectl config use-context'
+alias kn='kubens'
