@@ -33,8 +33,7 @@ function config_initial_setup {
 function config_install_binaries {
     typeset -a urls
     urls=(
-        https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-        https://github.com/Kong/insomnia/releases/download/core%402022.7.0/Insomnia.Core-2022.7.0.AppImage
+        https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.appimage
     )
     mkdir ~/.local/bin || true
     for url ("$urls[@]") do
