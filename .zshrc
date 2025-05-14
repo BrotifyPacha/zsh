@@ -70,6 +70,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777,bg=gray"
 source ~/.config/zsh/config.zsh
 # aliases
 source ~/.config/zsh/aliases.zsh
+# custom commands
+source ~/.config/zsh/commands.zsh
 
 local username=%F{245}%n%f%F{81}@%f%F{245}%m%f
 local last_two_dirs=%F{250}%2~%f
