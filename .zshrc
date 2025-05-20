@@ -3,7 +3,7 @@ export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
 export PATH="$PATH:/home/$USER/.dotnet"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export EDITOR=~/.local/bin/nvim
-export TERM="xterm-kitty"
+# export TERM="xterm-kitty"
 export BROWSER=brave
 
 if [ $PWD = ~ ] ; then
@@ -40,8 +40,6 @@ zstyle :compinstall filename '/home/pgusev/.zshrc'
 # Add ssh creds
 ssh-add ~/.ssh/{home,work}-main 2>/dev/null
 
-setxkbmap -option "caps:escape"
-
 autoload -Uz compinit ; compinit
 autoload -Uz add-zsh-hook
 autoload -U colors && colors
@@ -77,7 +75,9 @@ local username=%F{245}%n%f%F{81}@%f%F{245}%m%f
 local last_two_dirs=%F{250}%2~%f
 export PROMPT=$username\ $last_two_dirs$'\n'\$\ 
 
-wmname LG3D
+# move to macos
+# wmname LG3D
+# setxkbmap -option "caps:escape"
 
 ## Node version manager
 ## Commented for performance reason
