@@ -20,6 +20,8 @@ alias xphp='XDEBUG_SESSION=1 php'
 
 alias tsk='task'
 
+alias k9s='k9s --splashless --logoless'
+
 function cd {
     builtin cd $@
     pwd > /tmp/cwd
