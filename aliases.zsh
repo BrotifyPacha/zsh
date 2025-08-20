@@ -9,6 +9,7 @@ alias nvmi='nvim'
 alias vinm='nvim'
 alias vnin='nvim'
 alias vnim='nvim'
+alias vmni='nvim'
 
 alias ls='ls -l'
 alias la='ls -la'
