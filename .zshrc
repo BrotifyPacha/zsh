@@ -72,7 +72,7 @@ source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/commands.zsh
 source ~/.config/zsh/per-dir-history.zsh
 
-local username=%F{245}%n%f%F{81}@%f%F{245}%m%f
+local username=%F{245}%n%f%F{81}@%f%F{245}mac-пупсик
 local last_two_dirs=%F{250}%2~%f
 export PROMPT=$username\ $last_two_dirs$'\n'\$\ 
 
