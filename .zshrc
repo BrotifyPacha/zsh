@@ -2,7 +2,7 @@
 export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
 export PATH="$PATH:/home/$USER/.dotnet"
 export PATH="$PATH:$(go env GOPATH)/bin"
-export EDITOR=~/.local/bin/nvim
+export EDITOR=$(which nvim)
 # export TERM="xterm-kitty"
 export BROWSER=chrome
 
