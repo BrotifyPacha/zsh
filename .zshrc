@@ -38,7 +38,7 @@ bindkey -v "^R" history-incremental-search-backward
 zstyle :compinstall filename '/home/pgusev/.zshrc'
 
 # Add ssh creds
-ssh-add ~/.ssh/{home,work}-main 2>/dev/null
+ssh-add ~/.ssh/id_{personal,work} 2>/dev/null
 
 autoload -Uz compinit ; compinit
 autoload -Uz add-zsh-hook
