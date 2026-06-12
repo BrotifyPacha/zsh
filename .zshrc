@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 export PATH="$PATH:/home/$USER/.config/composer/vendor/bin"
 export PATH="$PATH:/home/$USER/.dotnet"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export EDITOR=$(which nvim)
 # export TERM="xterm-kitty"
