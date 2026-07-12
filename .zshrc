@@ -73,9 +73,15 @@ source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/commands.zsh
 source ~/.config/zsh/per-dir-history.zsh
 
+local clock=%F{250}%D{%H:%M:%S}\ %f󰀵
 local username=%F{245}%n%f%F{81}@%f%F{245}mac-пупсик
 local last_two_dirs=%F{250}%2~%f
-export PROMPT=$username\ $last_two_dirs$'\n'\$\ 
+export PROMPT=$clock\ $username\ $last_two_dirs$'\n'\$\ 
+
+TMOUT=1
+TRAPALRM() {
+    zle reset-prompt
+}
 
 # move to macos
 # wmname LG3D
