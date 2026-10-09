@@ -21,8 +21,6 @@ SAVEHIST=5000
 setopt globdots
 setopt autocd
 unsetopt beep
-# set viins vi-insert mode by default
-bindkey -v
 
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
